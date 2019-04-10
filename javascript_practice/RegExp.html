@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+
+<script>
+
+  // var box = new RegExp("box" , "gi");
+  // var pattern = /box/gi;
+  // var str = "This is a Box";
+  // alert(pattern.test(str)); //匹配成功返回true  失败false
+  // alert(pattern.exec(str));   //匹配成功返回匹配的数组，否则null ,先用test（），再用exec(),exec()匹配不到，返回null
+  
+  // var pattern = / /gi;
+  // var str = "This is a Box , This is a Box too"
+  // // alert(str.match(pattern));        //mach()返回一个数组,String对象方法
+  // // alert(str.match(pattern).length);
+  // // alert(str.search(pattern));       //位置从0开始，返回第一个找到的位置
+  // // alert(str.replace(pattern,"Tom"));//替换匹配内容
+  // alert(str.split(pattern))            //正则表达式匹配空格，将空格拆分，组成数组
+  
+  //使用静态属性 RegExp
+  //  var pattern= /(g)oogle/i;
+  //  var str = "This is a google!"
+  //  pattern.test(str);
+  //  alert(RegExp.input);         // =>This is a google 匹配的字符串
+  //alert(RegExp.leftContext);      // =>This is a        匹配前的子串
+  //alert(RegExp.rightContext);     // =>!                匹配后的子串
+  //alert(RegExp.lastMatch);          // =>google           匹配的子符串
+  //alert(RegExp.lastParen);          // =>g                 圆括号内的匹配子串
+  //alert(RegExp.multiline);            //undefined           （是否多行模式，）
+
+  //使用实例属性
+  //  var pattern = /google/gi;
+  //  alert(pattern.global);
+  //  alert(pattern.ignoreCase);
+  // alert(pattern.multiline);
+  // alert(pattern.lastIndex);
+  // alert(pattern.source);
+
+  //  var pattern = /google/g;
+  //  var str = "google google google";
+  //  pattern.test(str);
+  //  pattern.test(str);
+  //  alert(pattern.lastIndex);
+  // var pattern = /\$/;
+  // var str = "$123";
+  // alert(pattern.test(str));
+
+  // var pattern =/Javascript\sis\sfun/;  //\s只匹配一个空格
+  // var str = "Javascript is fun";
+  // alert(pattern.test(str));
+
+  // var pattern = /g..gle/gi;       // "."匹配除换行符外的任意字符，可以匹配空格
+  // var str = "g  gle";               
+  // alert(pattern.test(str));
+
+  // var pattern = /go*gle/gi;       // o*匹配0个，1个，多个o
+  // var str = "gogle";               
+  // alert(pattern.test(str));
+
+  // var pattern = /go+gle/gi;         //  o+匹配1个，多个o(至少一个，不是0个或一个)
+  // var str = "gogle";
+  // alert(pattern.test(str));
+
+  // alert(Math.exp(3));
+  // alert(Math.log10(100));
+  // alert(Number.MIN_VALUE);   // =>5e-324  最小的数，>0
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+  
+</script>
+</html>

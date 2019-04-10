@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="mydiv">
+
+    <div id="even"></div>
+  </div>
+  <script>
+   //eval()把字符串当成JavaScript代码编译，返回最后一个表达式或语句值，最后一个语句没有值，返回undefined
+  //eval()使用了调用它的变量作用域环境
+    // function even (){
+    //   var x =1;
+    //   var y = eval("x");
+    //   alert(y);
+      
+    // }
+    // even();
+
+
+    //通过ID查找多个元素
+    /*
+    函数接受任意多字符串参数
+    */
+    // function getElement(/*ids...*/){
+    //   var elements = {};
+    //   for(var i = 0 ; i < arguments.length ; i ++){
+    //     var id = arguments[i];
+    //     var elt = document.getElementById(id);
+    //     if(elt == null)
+    //          throw new Error("No element with id: " + id);
+    //          elements[id] = elt;
+    //   }
+    //   return elements;
+    // }
+    // console.log(getElement('even','mydiv'));
+
+    var numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1];
+    numbers.forEach(function(item, i ,  array){   //item 数组项的值，i数组中的位置，array数组对象本身
+      array[i] = array[i] +1;
+    })
+    console.log(numbers);
+   
+
+    </script>
+</body>
+</html>
