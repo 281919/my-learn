@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = "UTF-8">
+    <title></title>
+    
+
+
+
+
+<style>
+    #myDiv {
+        width : 100px;
+        height : 100px;
+        position : absolute;
+        left : 0;
+        top : 50px;
+        background : red;
+    }
+        
+    </style>
+
+</head>
+<body>
+
+    <input type = "button" value = "开始运动" onclick = "startMove()" />
+    <div id = "myDiv"><div>
+   
+<script>
+    function startMove(){
+        var div = document.getElementById("myDiv");
+        timer = setInterval (function(){
+            var iSpeed = 10;
+            if (div.offsetLeft >= 300){
+                clearInterval(timer);
+            } else{
+                div.style.left = div.offsetLeft + iSpeed + 'px';
+            }
+
+        } , 30);
+    }
+   
+    
+
+</script>
+</body>
+</html>

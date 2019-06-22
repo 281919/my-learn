@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = "UTF-8">
+    <title></title>
+    
+
+
+
+
+<style>
+  #div1{
+      width : 100px;
+      height :200px;
+      background : #CCC;
+      position : absolute;
+      left : -100px;
+  }
+  #div1 span {
+      width : 20px;
+      height : 60px;
+      line-height : 20px;
+      text-align : center;
+      left : 100px;
+      top : 70px;
+      background : yellow;
+      position : absolute;
+
+  }
+        
+    </style>
+
+</head>
+<body>
+
+  <div id = "div1">
+      <span>分享到</span>
+      </div>
+<script>
+    window.onload = function(){
+        var div = document.getElementById("div1");
+
+        div.onmouseover = function(){
+            startMove(0);
+        }
+        div.onmouseout = function(){
+            startMove(-100);
+        }
+
+    }
+    var timer = null;
+    
+    function startMove(iTarget){
+        var div = document.getElementById("div1");
+        clearInterval(timer);
+        timer = setInterval (function(){
+            var iSpeed = 0;
+            if(div.offsetLeft >= iTarget){
+                iSpeed = -10;
+            } else{
+                iSpeed = 10;
+            }
+            if (div.offsetLeft == iTarget){
+                clearInterval(timer);
+            } else{
+                div.style.left = div.offsetLeft + iSpeed + 'px';
+            }
+
+        } , 30);
+    }
+   
+    
+
+</script>
+</body>
+</html>
